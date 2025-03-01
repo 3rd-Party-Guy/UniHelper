@@ -1,0 +1,17 @@
+{
+    "name": "com.3rd-party-guy.unihelper",
+    "version": "1.0.0",
+    "displayName": "UniHelper",
+    "description": "Miscellaneous and helpful additions to the Unity SDK",
+    "author": {
+        "name": "Nikolay Hadzhiev",
+        "email": "nikolayhadzhiev@outlook.com",
+        "url": "https://github.com/3rd-Party-Guy"
+    },
+    "dependencies": {
+    },
+    "keywords": [
+        "Misc",
+        "Helper"
+    ]
+}
