@@ -96,7 +96,7 @@ namespace UniHelper
 
     public static class IEnumerableExtensions
     {
-        public static void Each<T>(this IEnumerable<T> value, Action<T, int> action)
+        public static void ForEach<T>(this IEnumerable<T> value, Action<T, int> action)
         {
             int i = 0;
             foreach (var item in value)
