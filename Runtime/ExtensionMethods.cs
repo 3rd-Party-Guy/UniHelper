@@ -102,6 +102,12 @@ namespace UniHelper
             foreach (var item in value)
                 action(item, i++);
         }
+
+        public static void ForEach<T>(this IEnumerable<T> value, Action<T> action)
+        {
+            foreach (var item in value)
+                action(item);
+        }
     }
 
     public static class ListExtensions
