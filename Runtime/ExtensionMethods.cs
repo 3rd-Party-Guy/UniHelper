@@ -115,7 +115,7 @@ namespace UniHelper
         private static readonly System.Random random = new System.Random();
         private static readonly object accessLock = new object();
 
-        public static T Random<T>(this List<T> self)
+        public static T Random<T>(this IReadOnlyList<T> self)
         {
             if (self == null)
                 throw new ArgumentNullException(nameof(self), "Uninitialized list accessed");
