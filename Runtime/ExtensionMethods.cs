@@ -103,4 +103,25 @@ namespace UniHelper
                 action(item, i++);
         }
     }
+
+    public static class ListExtensions
+    {
+        private static readonly System.Random random = new System.Random();
+        private static readonly object accessLock = new object();
+
+        public static T Random<T>(this List<T> self)
+        {
+            if (self == null)
+                throw new ArgumentNullException(nameof(self), "Uninitialized list accessed");
+            if (self.Count == 0)
+                throw new InvalidOperationException("List is empty");
+
+            lock (accessLock)
+            {
+                int index = random.Next(self.Count);
+                return self[index];
+            }
+        }
+    }
+
 }
