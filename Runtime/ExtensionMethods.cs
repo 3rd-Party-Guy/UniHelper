@@ -128,6 +128,17 @@ namespace UniHelper
                 return self[index];
             }
         }
-    }
 
+        public static bool TryGetValueAt<T>(this List<T> list, int index, out T value)
+        {
+            Debug.Assert(index >= 0, "UniHelper.ListExtensions: Tried to access list at negative index");
+            if (index < list.Count)
+            {
+                value = list[index];
+                return true;
+            }
+            value = default;
+            return false;
+        }
+    }
 }
